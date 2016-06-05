@@ -114,7 +114,7 @@ Here's the brief description of some packages:
 
 ### NPM scripts
 
-There are two blocks to pay attention to:
+There are two `package.json` sections to pay attention to:
 
 - config,
 - scripts.
@@ -157,15 +157,15 @@ folder.
 
 Please note that `sql` script defined in the `package.json` file uses
 `node-foreman` to load `.env` file containing database access credentials.
-`-- db:migrate` part is used to pass arguments to the `sequelize` command.
+The `-- db:migrate` part is used to pass arguments to the `sequelize` command.
 This way you can use `npm run sql` command to call `sequelize` for various
 tasks: creating new models, undoing migrations etc.
 
-`node-foreman` module uses `Procfile` files to describe what processes should
-be launched. For example it can start a process for the API server and another
-for the web server, e.g. interface for managing API users.
+The `node-foreman` module uses `Procfile` files to describe what processes
+should be launched. For example it can start a process for the API server
+and another for the web server, e.g. interface for managing API users.
 
-`node-foreman` provides a PORT environment variable which can be used
+The `node-foreman` module provides a PORT environment variable which can be used
 in the application configuration file as described in its
 [documentation](https://github.com/strongloop/node-foreman#advanced-usage).
 
