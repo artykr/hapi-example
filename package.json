@@ -14,7 +14,7 @@
     "start:dev": "npm start --hapi-example-application:procfile=Procfile.dev",
     "test": "nf run -e .testenv mocha",
     "test:watch": "npm run test -- -w",
-    "sql": "sequelize"
+    "sql": "nf run sequelize"
   },
   "engines": {
     "node": ">=5.0.0"
