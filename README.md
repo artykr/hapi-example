@@ -109,7 +109,7 @@ Here's the brief description of some packages:
 - `chai`: assertion library for Mocha,
 - `chai-as-promised`: promise-based version of chai,
 - `foreman`: process manager,
-- ``
+- `nodemon`: restarts application on file change.
 
 ### NPM scripts
 
