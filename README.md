@@ -146,6 +146,20 @@ in the `package.json` file for an example.
 
 ## Getting up and running
 
+First of all a database must be initialized. This application uses MySQL as
+a database backend by default.
+
+1. Create two separate databases: for development and for running tests.
+2. Update `.env` and `.testenv` files with corresponding credentials.
+3. Run `npm run sql -- db:migrate` at the command prompt inside project's
+folder.
+
+Please note that `sql` script defined in the `package.json` file uses
+`node-foreman` to load `.env` file containing database access credentials.
+`-- db:migrate` part is used to pass arguments to the `sequelize` command.
+This way you can use `npm run sql` command to call `sequelize` for various
+tasks: creating new models, undoing migrations etc.
+
 `node-foreman` module uses `Procfile` files to describe what processes should
 be launched. For example it can start a process for the API server and another
 for the web server, e.g. interface for managing API users.
