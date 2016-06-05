@@ -1,0 +1,42 @@
+{
+  "name": "hapi-example-application",
+  "version": "0.0.1",
+  "description": "HAPI example application",
+  "main": "src/api/index.js",
+  "author": "Artem Krivtsov <artykr@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "config": {
+    "procfile": "Procfile"
+  },
+  "scripts": {
+    "start": "nf start -j $npm_package_config_procfile",
+    "start:dev": "npm start --hapi-example-application:procfile=Procfile.dev",
+    "test": "nf run -e .testenv mocha",
+    "test:watch": "npm run test -- -w",
+    "sql": "sequelize"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "author": "Art Krivtsov <http://akrivtsov.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "hapi": "^13.0.0",
+    "hapi-auth-bearer-token": "^4.0.0",
+    "joi": "^8.0.5",
+    "mysql": "^2.9.0",
+    "sequelize": "^3.17.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "chai-as-promised": "^5.2.0",
+    "foreman": "^1.4.1",
+    "mocha": "latest",
+    "nodemon": "latest",
+    "parse-link-header": "^0.4.1",
+    "sequelize-cli": "^2.2.1"
+  }
+}

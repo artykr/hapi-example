@@ -1,0 +1,20 @@
+{
+	"node": true,
+	"newcap": true,
+	"strict": true,
+	"laxcomma": true,
+	"noarg": true,
+	"noempty": true,
+	"undef": true,
+	"maxdepth": 2,
+	"maxlen": 100,
+	"sub": true,
+	"esnext": true,
+	"mocha": true,
+	"globals": {
+		"supertest": true,
+		"config": true,
+		"done": false,
+		"expect": false
+	}
+}
